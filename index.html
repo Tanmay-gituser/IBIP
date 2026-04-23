@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart To-Do | Master Your Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="app-container">
+        <header class="app-header">
+            <h1><i class="fa-solid fa-bolt text-accent"></i> Smart To-Do</h1>
+            <p class="subtitle">Stay organized, focused, and productive.</p>
+        </header>
+
+        <section class="add-task-section">
+            <form id="task-form" class="task-form">
+                <div class="form-inputs">
+                    <input 
+                        type="text" 
+                        id="task-input" 
+                        class="task-input" 
+                        placeholder="What needs to be done today?"
+                        autocomplete="off"
+                        required
+                    >
+                    <input 
+                        type="datetime-local" 
+                        id="task-date" 
+                        class="task-date-input"
+                        title="Set an optional due date and time"
+                    >
+                </div>
+                <button type="submit" class="btn-add">
+                    <i class="fa-solid fa-plus"></i> Add
+                </button>
+            </form>
+        </section>
+
+        <section class="task-list-section">
+            <div class="list-header">
+                <h2>Your Tasks</h2>
+                <span id="task-count" class="task-count">0 tasks</span>
+            </div>
+            
+            <ul id="task-list" class="task-list">
+                <!-- Tasks will be dynamically injected here -->
+                <div class="empty-state" id="empty-state">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <p>No tasks yet. Add one above!</p>
+                </div>
+            </ul>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
